@@ -42,9 +42,9 @@ body {
 /* HERO */
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 60px 80px;
+  grid-template-columns: 1.2fr 1fr; 
   align-items: center;
+  padding: 80px 80px 80px 40px; 
 }
 
 .hero-left img {
@@ -60,7 +60,7 @@ body {
 
 .hero-right .thin {
   font-weight: 400;
-  font-size: 28px;
+  font-size: 28px; 
 }
 
 .subtitle {
