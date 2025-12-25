@@ -47,9 +47,16 @@ body {
   padding: 80px 80px 80px 40px; 
 }
 
+.hero-left {
+  display: flex;
+  justify-content: flex-start; /* pushes image left */
+}
+
 .hero-left img {
   max-width: 100%;
+  height: auto;
 }
+
 
 .hero-right h1 {
   font-family: 'Inter', sans-serif;
@@ -58,9 +65,10 @@ body {
   margin-bottom: 20px;
 }
 
-.hero-right .thin {
-  font-weight: 400;
-  font-size: 28px; 
+
+.hero-right {
+  padding-left: 60px;
+  border-left: 2px solid #2e2e2e;
 }
 
 .subtitle {
