@@ -149,3 +149,243 @@ body {
     font-size: 48px;
   }
 }
+
+
+
+
+
+
+
+/* =====================================================
+   PAGES CODE 
+===================================================== */
+
+
+
+
+/* =====================================================
+   ROOT VARIABLES
+===================================================== */
+:root {
+  --bg: #f8f3ec;
+  --text: #2e2e2e;
+  --muted: #6b6b6b;
+  --border: #2e2e2e;
+}
+
+/* =====================================================
+   RESET & BASE
+===================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+.nav {
+  padding: 24px 40px;
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 600;
+}
+
+.nav a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+}
+
+/* =====================================================
+   HOME PAGE – HERO
+===================================================== */
+.hero {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding: 80px 80px 80px 40px;
+}
+
+/* Left image */
+.hero-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.hero-left img {
+  max-width: 85%;
+  height: auto;
+  margin-left: -30px;
+}
+
+/* Right text */
+.hero-right {
+  padding-left: 60px;
+  border-left: 2px solid var(--border);
+}
+
+.hero-right h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.hero-right .thin {
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 420px;
+  margin-bottom: 36px;
+}
+
+/* Buttons */
+.cta {
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  padding: 12px 28px;
+  border: 2px solid var(--border);
+  background: transparent;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--text);
+  color: var(--bg);
+  transition: 0.2s ease;
+}
+
+/* =====================================================
+   PROJECTS PAGE
+===================================================== */
+
+/* Shelf divider */
+.projects-shelf {
+  padding: 40px 40px 0 40px;
+}
+
+.projects-shelf img {
+  max-width: 420px;
+  height: auto;
+}
+
+/* Layout */
+.projects-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 80px;
+  padding: 60px 80px;
+  align-items: start;
+}
+
+/* Project grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.project-item {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.project-item img {
+  width: 160px;
+  height: auto;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.project-item p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.project-item:hover img {
+  transform: translateY(-4px);
+}
+
+/* Right text panel */
+.projects-text {
+  border-left: 2px solid var(--border);
+  padding-left: 40px;
+}
+
+.projects-text h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.projects-text p {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 360px;
+  line-height: 1.5;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 40px 24px;
+  }
+
+  .hero-left img {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .hero-right {
+    border-left: none;
+    padding-left: 0;
+    margin-top: 40px;
+  }
+
+  .projects-layout {
+    grid-template-columns: 1fr;
+    padding: 40px 24px;
+  }
+
+  .projects-text {
+    border-left: none;
+    padding-left: 0;
+    margin-top: 40px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
