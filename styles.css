@@ -67,10 +67,11 @@ body {
 }
 
 .hero-left img {
-  max-width: 115%;        /* lets image feel larger */
+  max-width: 85%;       /* ↓ makes it smaller */
   height: auto;
-  margin-left: -60px;    /* pulls image left */
+  margin-left: -50px;  /* still nudges left, but gently */
 }
+
 
 /* ------------------------------
    RIGHT SIDE (TEXT)
