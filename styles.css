@@ -1,82 +1,42 @@
-:root {
-  --bg: #f8f3ec;
-  --text: #2e2e2e;
-  --muted: #6b6b6b;
-  --border: #2e2e2e;
+.projects {
+  padding: 80px;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-}
-
-/* NAV */
-.nav {
-  padding: 24px 40px;
-}
-
-.nav-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav a {
-  margin-left: 24px;
-  text-decoration: none;
-  color: var(--text);
-  font-size: 14px;
-}
-
-.logo {
-  font-weight: 600;
-}
-
-.hero {
+.project-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
+  margin-top: 40px;
 }
 
-.hero-left {
-  display: flex;
-  justify-content: flex-start;
+.project-item {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
 }
 
-.hero-left img {
-  margin-left: -40px;
-  max-width: 110%;
-}
-
-
-.subtitle {
-  font-size: 16px;
-  color: var(--muted);
-  max-width: 400px;
-  margin-bottom: 32px;
-}
-
-/* BUTTONS */
-.cta {
-  display: flex;
-  gap: 16px;
-}
-
-.btn {
-  padding: 12px 24px;
-  border: 2px solid var(--border);
-  text-decoration: none;
-  color: var(--text);
+.project-item p {
+  margin-top: 12px;
   font-size: 14px;
+  letter-spacing: 0.5px;
 }
 
-.btn.outline {
+/* Folder icon */
+.folder {
+  width: 100px;
+  height: 70px;
+  border: 2px solid #2e2e2e;
+  position: relative;
+  margin: 0 auto;
+}
+
+.folder::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 10px;
+  width: 40px;
+  height: 12px;
+  border: 2px solid #2e2e2e;
+  border-bottom: none;
   background: transparent;
 }
-
