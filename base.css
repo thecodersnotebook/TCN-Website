@@ -64,9 +64,9 @@ body {
 }
 
 .hero-left img {
-  max-width: 80%;
+  max-width: 90%;
   height: auto;
-  margin-left: -50px;
+  margin-left: -60px;
 }
 
 .hero-right {
