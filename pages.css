@@ -1,1 +1,128 @@
+/* =====================================================
+   PROJECTS PAGE
+===================================================== */
+
+/* Shelf divider under nav */
+.projects-shelf {
+  padding: 40px 40px 0 40px;
+}
+
+.projects-shelf img {
+  max-width: 420px;
+  height: auto;
+}
+
+/* Main layout */
+.projects-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 80px;
+  padding: 60px 80px;
+  align-items: start;
+}
+
+/* ----------------------------------
+   Projects grid (folders)
+----------------------------------- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.project-item {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.project-item img {
+  width: 160px;
+  height: auto;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.project-item p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Hover interaction */
+.project-item:hover img {
+  transform: translateY(-4px);
+}
+
+/* ----------------------------------
+   Right-hand text panel
+----------------------------------- */
+.projects-text {
+  border-left: 2px solid var(--border);
+  padding-left: 40px;
+}
+
+.projects-text h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.projects-text p {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 360px;
+  line-height: 1.5;
+}
+
+/* =====================================================
+   ARTICLES PAGE (placeholder – ready for later)
+===================================================== */
+
+.articles-layout {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.article {
+  margin-bottom: 60px;
+}
+
+.article h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.article p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+  /* Projects */
+  .projects-layout {
+    grid-template-columns: 1fr;
+    padding: 40px 24px;
+  }
+
+  .projects-text {
+    border-left: none;
+    padding-left: 0;
+    margin-top: 40px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Articles */
+  .articles-layout {
+    padding: 60px 20px;
+  }
+}
 
