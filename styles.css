@@ -52,7 +52,7 @@ body {
 --------------------------------*/
 .hero {
   display: grid;
-  grid-template-columns: 1.25fr 1fr; /* image slightly wider */
+  grid-template-columns: 1fr 1.25fr; /* image slightly wider */
   align-items: center;
   padding: 80px 80px 80px 40px; /* less padding on left */
   gap: 60px;
@@ -67,7 +67,7 @@ body {
 }
 
 .hero-left img {
-  max-width: 90%;       /* ↓ makes it smaller */
+  max-width: 80%;       /* ↓ makes it smaller */
   height: auto;
   margin-left: -50px;  /* still nudges left, but gently */
 }
@@ -117,12 +117,18 @@ body {
   color: var(--text);
   font-size: 14px;
   cursor: pointer;
+
+  /* animation */
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .btn:hover {
   background-color: var(--text);
   color: var(--bg);
-  transition: 0.2s ease;
+  transform: translateY(-2px);
 }
 
 /* ------------------------------
