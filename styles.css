@@ -52,11 +52,12 @@ body {
 --------------------------------*/
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1.5fr; /* image slightly wider */
+  grid-template-columns: 0.8fr 1.7fr; /* image smaller, text wider */
   align-items: center;
-  padding: 80px 80px 80px 40px; /* less padding on left */
-  gap: 60px;
+  padding: 80px 80px 80px 40px;
+  gap: 40px; /* pull columns closer */
 }
+
 
 /* ------------------------------
    LEFT SIDE (IMAGE)
