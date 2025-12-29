@@ -52,7 +52,7 @@ body {
 =============================== */
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 1.4fr;
   gap: 30px;
   align-items: center;
   padding: 80px 80px 80px 40px;
@@ -64,9 +64,9 @@ body {
 }
 
 .hero-left img {
-  max-width: 90%;
+  max-width: 110%;
   height: auto;
-  margin-left: -60px;
+  margin-left: -20px;
 }
 
 .hero-right {
