@@ -2,15 +2,132 @@
    HOME BOARD (BOTTOM SECTION)
 ===================================================== */
 
+/* ===============================
+   HOME BOARD
+=============================== */
 .home-board {
   display: grid;
-  grid-template-columns: 1fr 1fr 1.2fr;
+  grid-template-columns: 1fr 1.2fr 1fr;
   gap: 80px;
-  padding: 80px;
+  padding: 80px 80px 120px 80px;
   background-image:
     linear-gradient(to right, rgba(0,0,0,0.08) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(0,0,0,0.08) 1px, transparent 1px);
   background-size: 32px 32px;
+}
+
+/* ===============================
+   LEFT COLUMN
+=============================== */
+.board-left {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* Social links */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-links a {
+  width: fit-content;
+  padding: 8px 16px;
+  border: 2px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+}
+
+/* Future projects */
+.future-projects {
+  display: flex;
+  gap: 32px;
+}
+
+.future-card {
+  border: 2px solid var(--border);
+  padding: 20px;
+  max-width: 200px;
+}
+
+.future-card h4 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.future-card p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ===============================
+   MIDDLE COLUMN (ARTICLES)
+=============================== */
+.board-middle {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.article-card img {
+  width: 260px;
+  height: auto;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.article-card h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.article-card p {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+}
+
+/* ===============================
+   RIGHT COLUMN (THIS WEEK)
+=============================== */
+.board-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.week-panel {
+  border: 2px solid var(--border);
+  padding: 40px;
+  max-width: 320px;
+  background-color: var(--bg);
+}
+
+.week-panel h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.week-panel h4 {
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
+.week-panel p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
 }
 
 
