@@ -143,3 +143,43 @@ body {
     font-size: 48px;
   }
 }
+
+/* ===============================
+   FOOTER
+=============================== */
+.footer {
+  margin-top: 120px;
+  padding: 24px 40px;
+  border-top: 2px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.footer-left {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.footer-left span {
+  color: var(--text);
+}
+
+.footer-right {
+  font-family: monospace;
+  color: var(--text);
+}
+
+/* ===============================
+   FOOTER (MOBILE)
+=============================== */
+@media (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
