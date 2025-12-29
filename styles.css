@@ -52,7 +52,7 @@ body {
 --------------------------------*/
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1.25fr; /* image slightly wider */
+  grid-template-columns: 1fr 1.5fr; /* image slightly wider */
   align-items: center;
   padding: 80px 80px 80px 40px; /* less padding on left */
   gap: 60px;
@@ -67,7 +67,7 @@ body {
 }
 
 .hero-left img {
-  max-width: 80%;       /* ↓ makes it smaller */
+  max-width: 60%;       /* ↓ makes it smaller */
   height: auto;
   margin-left: -50px;  /* still nudges left, but gently */
 }
