@@ -110,7 +110,10 @@ body {
   color: var(--text);
   font-size: 14px;
   cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .btn:hover {
@@ -120,9 +123,68 @@ body {
 }
 
 /* ===============================
+   FOOTER
+=============================== */
+.site-footer {
+  margin-top: 120px;
+  padding: 32px 40px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* Footer left */
+.footer-left p {
+  margin-bottom: 4px;
+}
+
+.footer-left a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.footer-left a:hover {
+  opacity: 0.7;
+}
+
+/* Footer right (terminal feel) */
+.footer-right {
+  font-family: monospace;
+  font-size: 12px;
+  color: var(--muted);
+  opacity: 0.85;
+}
+
+.footer-right p {
+  line-height: 1.6;
+}
+
+/* Blinking cursor */
+.footer-right::after {
+  content: "▍";
+  margin-left: 4px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ===============================
    RESPONSIVE (GLOBAL)
 =============================== */
 @media (max-width: 900px) {
+
+  /* Hero */
   .hero {
     grid-template-columns: 1fr;
     padding: 40px 24px;
@@ -142,44 +204,11 @@ body {
   .hero-right h1 {
     font-size: 48px;
   }
-}
 
-/* ===============================
-   FOOTER
-=============================== */
-.footer {
-  margin-top: 120px;
-  padding: 24px 40px;
-  border-top: 2px solid var(--border);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 13px;
-  color: var(--muted);
-}
-
-.footer-left {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-.footer-left span {
-  color: var(--text);
-}
-
-.footer-right {
-  font-family: monospace;
-  color: var(--text);
-}
-
-/* ===============================
-   FOOTER (MOBILE)
-=============================== */
-@media (max-width: 900px) {
-  .footer {
+  /* Footer */
+  .footer-inner {
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
     text-align: center;
   }
 }
