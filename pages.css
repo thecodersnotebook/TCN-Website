@@ -7,217 +7,171 @@
 =============================== */
 .home-board {
   display: grid;
-  grid-template-columns: 1fr 1.2fr 1fr;
+  grid-template-columns: 1fr 1.3fr 1.2fr;
   gap: 80px;
-  padding: 80px 80px 120px 80px;
+  padding: 100px 80px 120px 80px;
+
   background-image:
-    linear-gradient(to right, rgba(0,0,0,0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0,0,0,0.08) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0,0,0,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.06) 1px, transparent 1px);
   background-size: 32px 32px;
 }
 
-/* ===============================
+/* ------------------------------
    LEFT COLUMN
-=============================== */
+--------------------------------*/
 .board-left {
   display: flex;
   flex-direction: column;
-  gap: 48px;
-}
-
-/* Social links */
-.social-links {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  gap: 56px;
 }
 
 .social-links a {
-  width: fit-content;
-  padding: 8px 16px;
+  display: block;
+  padding: 10px 20px;
   border: 2px solid var(--border);
   text-decoration: none;
-  color: var(--text);
   font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  width: fit-content;
+  transition: background 0.2s ease;
 }
 
-/* Future projects */
+.social-links a:hover {
+  background: rgba(0,0,0,0.05);
+}
+
 .future-projects {
   display: flex;
+  flex-direction: column;
   gap: 32px;
 }
 
 .future-card {
   border: 2px solid var(--border);
-  padding: 20px;
-  max-width: 200px;
+  padding: 24px 28px;
+  max-width: 240px;
+  background: var(--bg);
 }
 
 .future-card h4 {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 8px;
+  font-weight: 600;
 }
 
 .future-card p {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--muted);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-/* ===============================
+/* ------------------------------
    MIDDLE COLUMN (ARTICLES)
-=============================== */
+--------------------------------*/
 .board-middle {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 64px;
+  align-items: start;
+}
+
+.article-card {
+  border: none;
+  background: transparent;
+  text-align: center;
 }
 
 .article-card img {
-  width: 260px;
-  height: auto;
-  display: block;
-  margin-bottom: 12px;
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 16px;
 }
 
 .article-card h3 {
-  font-size: 18px;
-  margin-bottom: 6px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
 }
 
 .article-card p {
   font-size: 14px;
   color: var(--muted);
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  line-height: 1.6;
 }
 
-.tag {
+.article-btn {
   display: inline-block;
-  font-size: 12px;
-  padding: 4px 10px;
-  border: 1px solid var(--border);
+  padding: 8px 18px;
+  border: 2px solid var(--border);
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-/* ===============================
+.article-btn:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
+/* ------------------------------
    RIGHT COLUMN (THIS WEEK)
-=============================== */
+--------------------------------*/
 .board-right {
-  display: flex;
-  justify-content: flex-end;
+  align-self: start;
 }
 
 .week-panel {
   border: 2px solid var(--border);
   padding: 40px;
-  max-width: 320px;
-  background-color: var(--bg);
+  background: var(--bg);
+  max-width: 360px;
 }
 
 .week-panel h2 {
   font-size: 32px;
   margin-bottom: 24px;
+  font-weight: 700;
 }
 
-.week-panel h4 {
+.week-panel .day {
+  margin-bottom: 24px;
+}
+
+.week-panel .day h4 {
   font-size: 14px;
-  margin-top: 20px;
-  margin-bottom: 4px;
-}
-
-.week-panel p {
-  font-size: 13px;
-  color: var(--muted);
-  line-height: 1.5;
-}
-
-
-/* ------------------------------
-   LEFT SIDE
---------------------------------*/
-.board-left {
-  display: grid;
-  grid-template-rows: auto auto 1fr;
-  gap: 60px;
-}
-
-/* Social links */
-.social-links a {
-  display: inline-block;
-  border: 2px solid var(--border);
-  padding: 10px 18px;
-  margin-right: 12px;
-  text-decoration: none;
-  font-size: 14px;
-  color: var(--text);
-}
-
-/* Sticky notes */
-.future-projects {
-  display: flex;
-  gap: 24px;
-}
-
-.note {
-  border: 2px solid var(--border);
-  padding: 16px;
-  max-width: 200px;
-  background: var(--bg);
-}
-
-.note h4 {
-  font-size: 14px;
-  margin-bottom: 8px;
-}
-
-/* Articles preview */
-.articles-preview {
-  display: flex;
-  gap: 40px;
-}
-
-.articles-preview article {
-  max-width: 240px;
-}
-
-.articles-preview img {
-  width: 100%;
-  margin-bottom: 12px;
-}
-
-.articles-preview h3 {
-  font-size: 16px;
-  margin-bottom: 8px;
-}
-
-.tag {
-  display: inline-block;
-  margin-top: 8px;
-  font-size: 12px;
-  padding: 4px 8px;
-  border: 1px solid var(--border);
-}
-
-/* ------------------------------
-   RIGHT SIDE (THIS WEEK)
---------------------------------*/
-.board-week {
-  border: 3px solid var(--border);
-  padding: 40px;
-  background: #f6eddc;
-}
-
-.board-week h2 {
-  font-size: 32px;
-  margin-bottom: 32px;
-}
-
-.day {
-  margin-bottom: 32px;
-}
-
-.day h4 {
-  font-size: 14px;
+  font-weight: 600;
   margin-bottom: 6px;
+}
+
+.week-panel .day p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+@media (max-width: 960px) {
+  .home-board {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    padding: 60px 24px;
+  }
+
+  .board-middle {
+    grid-template-columns: 1fr;
+  }
+
+  .article-card img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 
