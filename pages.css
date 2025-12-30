@@ -1,110 +1,72 @@
-
 /* =====================================================
-   HOME BOARD — STUDIO NOTES
+   HOME BOARD — QUIET PAGE
 ===================================================== */
 
 .home-board {
-  padding: 120px 80px;
+  padding: 160px 80px;
 
   background-image:
-    linear-gradient(to right, rgba(0,0,0,0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0,0,0,0.06) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
   background-size: 32px 32px;
 }
 
-/* ------------------------------
-   INTRO
---------------------------------*/
-.studio-intro {
-  max-width: 560px;
-  margin-bottom: 80px;
+/* Wrapper keeps content calm + narrow */
+.quiet-wrapper {
+  max-width: 520px;
 }
 
-.studio-intro .eyebrow {
+/* Small label */
+.quiet-eyebrow {
   font-size: 11px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
 
-.studio-intro h2 {
+/* Main thought */
+.quiet-title {
   font-family: 'Inter', sans-serif;
-  font-size: 36px;
-  margin-bottom: 16px;
+  font-size: 38px;
+  line-height: 1.2;
+  margin-bottom: 32px;
 }
 
-.studio-intro .intro-text {
-  font-size: 16px;
-  color: var(--muted);
-  line-height: 1.7;
-}
-
-/* ------------------------------
-   FEATURED NOTE
---------------------------------*/
-.featured-note {
-  max-width: 520px;
-  margin-bottom: 100px;
-}
-
-.featured-note h3 {
-  font-size: 22px;
-  margin-bottom: 12px;
-}
-
-.featured-note p {
+/* Paragraph */
+.quiet-paragraph {
   font-size: 16px;
   line-height: 1.8;
   color: var(--text);
+  margin-bottom: 48px;
 }
 
-/* ------------------------------
-   ARTICLE ROW
---------------------------------*/
-.article-row {
-  display: flex;
-  gap: 80px;
-  align-items: flex-start;
+/* List of thoughts */
+.quiet-list p {
+  font-size: 15px;
+  color: var(--muted);
+  margin-bottom: 14px;
 }
 
-.article-preview {
-  display: flex;
-  gap: 20px;
-  max-width: 420px;
-}
-
-.article-preview img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.article-preview h4 {
-  font-size: 18px;
-  margin-bottom: 6px;
-}
-
-.article-preview p {
+/* Closing line */
+.quiet-footer {
+  margin-top: 60px;
   font-size: 14px;
   color: var(--muted);
-  line-height: 1.6;
+  font-style: italic;
 }
 
-/* ------------------------------
-   RESPONSIVE
---------------------------------*/
+/* Responsive */
 @media (max-width: 900px) {
   .home-board {
-    padding: 80px 24px;
+    padding: 100px 24px;
   }
 
-  .article-row {
-    flex-direction: column;
-    gap: 40px;
+  .quiet-title {
+    font-size: 30px;
   }
 }
+
 
 
 /* =====================================================
