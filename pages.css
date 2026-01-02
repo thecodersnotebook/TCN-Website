@@ -1,69 +1,154 @@
-/* =====================================================
-   HOME BOARD — QUIET PAGE
-===================================================== */
+/* ===============================
+   HOME – STUDIO SECTION
+=============================== */
 
-.home-board {
-  padding: 160px 80px;
+.home-studio {
+  padding: 120px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
 
   background-image:
-    linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0,0,0,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.06) 1px, transparent 1px);
   background-size: 32px 32px;
 }
 
-/* Wrapper keeps content calm + narrow */
-.quiet-wrapper {
+/* ---------- TOP ROW ---------- */
+.studio-top {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 120px;
+  align-items: start;
+}
+
+/* Photo with frame */
+.photo-frame {
+  position: relative;
+  width: 320px;
+}
+
+.photo-frame .frame {
+  width: 100%;
+  display: block;
+}
+
+.photo-frame .photo {
+  position: absolute;
+  inset: 18px;
+  width: calc(100% - 36px);
+  height: auto;
+}
+
+/* Paper note */
+.paper-note {
+  position: relative;
   max-width: 520px;
 }
 
-/* Small label */
-.quiet-eyebrow {
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--muted);
+.paper-note img {
+  width: 100%;
+  display: block;
+}
+
+.paper-note p {
+  position: absolute;
+  inset: 40px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+/* ---------- MIDDLE ROW ---------- */
+.studio-middle {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 120px;
+  align-items: start;
+}
+
+/* Newsletter */
+.newsletter {
+  background: url("images/newsletter_frame.png") no-repeat center / contain;
+  padding: 60px 48px;
+  max-width: 360px;
+}
+
+.newsletter h3 {
+  font-size: 22px;
   margin-bottom: 24px;
 }
 
-/* Main thought */
-.quiet-title {
-  font-family: 'Inter', sans-serif;
-  font-size: 38px;
-  line-height: 1.2;
-  margin-bottom: 32px;
-}
-
-/* Paragraph */
-.quiet-paragraph {
-  font-size: 16px;
-  line-height: 1.8;
-  color: var(--text);
-  margin-bottom: 48px;
-}
-
-/* List of thoughts */
-.quiet-list p {
-  font-size: 15px;
-  color: var(--muted);
-  margin-bottom: 14px;
-}
-
-/* Closing line */
-.quiet-footer {
-  margin-top: 60px;
+.newsletter label {
+  display: block;
   font-size: 14px;
-  color: var(--muted);
-  font-style: italic;
+  margin-bottom: 16px;
 }
 
-/* Responsive */
+.newsletter input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  background: transparent;
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+.newsletter button {
+  margin-top: 24px;
+  padding: 8px 24px;
+  border: 2px solid var(--border);
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Navigation cards */
+.nav-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 520px;
+}
+
+.nav-card {
+  padding: 28px 32px;
+  border-radius: 18px;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-card.primary {
+  background: #b6493d;
+  color: #fff;
+}
+
+.nav-card.outline {
+  border: 2px solid #b6493d;
+  color: #b6493d;
+  background: #fff6e5;
+}
+
+.nav-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.1);
+}
+
+/* ---------- RESPONSIVE ---------- */
 @media (max-width: 900px) {
-  .home-board {
-    padding: 100px 24px;
+  .studio-top,
+  .studio-middle {
+    grid-template-columns: 1fr;
+    gap: 80px;
   }
 
-  .quiet-title {
-    font-size: 30px;
+  .nav-cards {
+    grid-template-columns: 1fr;
   }
 }
 
