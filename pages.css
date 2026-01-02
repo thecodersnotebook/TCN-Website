@@ -1,10 +1,152 @@
-   /* ===== SECOND HALF DESIGN ===== */
+ /* =====================================================
+   PAGES.CSS
+   Secondary layouts & page-specific sections
+===================================================== */
+
+/* =====================================================
+   HOMEPAGE — FROM THE DESK
+===================================================== */
+
+.desk-section {
+  padding: 120px 80px;
+}
+
+.desk-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Image + frame */
+.desk-image {
+  position: relative;
+  max-width: 420px;
+}
+
+.desk-image img {
+  width: 100%;
+  display: block;
+}
+
+.desk-frame {
+  position: absolute;
+  top: -14px;
+  left: -14px;
+  width: 100%;
+  pointer-events: none;
+}
+
+/* Text */
+.desk-text h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.desk-text p {
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 420px;
+  margin-bottom: 32px;
+}
+
+/* =====================================================
+   HOMEPAGE — PINNED NOTES
+===================================================== */
+
+.notes-strip {
+  border-top: 2px solid var(--border);
+  border-bottom: 2px solid var(--border);
+  padding: 24px 40px;
+  margin: 80px 0;
+}
+
+.notes-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* =====================================================
+   HOMEPAGE — NEWSLETTER OBJECT
+===================================================== */
+
+.newsletter-object {
+  padding: 120px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-paper {
+  position: relative;
+  max-width: 520px;
+}
+
+.paper-bg {
+  width: 100%;
+  display: block;
+}
+
+.paper-content {
+  position: absolute;
+  top: 18%;
+  left: 12%;
+  right: 12%;
+}
+
+.paper-content h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.paper-content p {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+/* Newsletter form */
+.paper-form {
+  display: flex;
+  gap: 12px;
+}
+
+.paper-form input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  background: transparent;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+}
+
+.paper-form button {
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  background: transparent;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.paper-form button:hover {
+  background: var(--text);
+  color: var(--bg);
+}
 
 /* =====================================================
    PROJECTS PAGE
 ===================================================== */
 
-/* Shelf divider under nav */
+/* Bookshelf divider */
 .projects-shelf {
   padding: 40px 40px 0 40px;
 }
@@ -14,7 +156,7 @@
   height: auto;
 }
 
-/* Main layout */
+/* Layout */
 .projects-layout {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
@@ -23,9 +165,7 @@
   align-items: start;
 }
 
-/* ----------------------------------
-   Projects grid (folders)
------------------------------------ */
+/* Project folders */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -38,7 +178,6 @@
 
 .project-item img {
   width: 160px;
-  height: auto;
   display: block;
   transition: transform 0.2s ease;
 }
@@ -48,14 +187,11 @@
   font-size: 14px;
 }
 
-/* Hover interaction */
 .project-item:hover img {
   transform: translateY(-4px);
 }
 
-/* ----------------------------------
-   Right-hand text panel
------------------------------------ */
+/* Side text */
 .projects-text {
   border-left: 2px solid var(--border);
   padding-left: 40px;
@@ -75,7 +211,7 @@
 }
 
 /* =====================================================
-   ARTICLES PAGE (placeholder – ready for later)
+   ARTICLES PAGE (LIGHT PLACEHOLDER)
 ===================================================== */
 
 .articles-layout {
@@ -106,6 +242,22 @@
 
 @media (max-width: 900px) {
 
+  /* Desk section */
+  .desk-section {
+    padding: 80px 24px;
+  }
+
+  .desk-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  /* Newsletter */
+  .paper-content {
+    position: static;
+    padding: 24px;
+  }
+
   /* Projects */
   .projects-layout {
     grid-template-columns: 1fr;
@@ -121,10 +273,4 @@
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  /* Articles */
-  .articles-layout {
-    padding: 60px 20px;
-  }
 }
-
