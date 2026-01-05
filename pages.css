@@ -173,22 +173,22 @@
 
 /* Shelf divider under nav */
 .projects-shelf {
-  padding: 40px 40px 0 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 40px 0;
 }
 
-.projects-shelf img {
-  max-width: 420px;
-  height: auto;
-}
 
 /* Main layout */
 .projects-layout {
+  max-width: 1100px;          /* tighter than homepage */
+  margin: 0 auto;
+  padding: 60px 40px;
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 80px;
-  padding: 60px 80px;
-  align-items: start;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 64px;
 }
+
 
 /* ----------------------------------
    Projects grid (folders)
@@ -196,7 +196,7 @@
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 48px;
+  gap: 32px;
 }
 
 .project-item {
@@ -204,7 +204,7 @@
 }
 
 .project-item img {
-  width: 160px;
+  width: 120px;
   height: auto;
   display: block;
   transition: transform 0.2s ease;
